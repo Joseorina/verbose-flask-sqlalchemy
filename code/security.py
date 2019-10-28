@@ -26,4 +26,4 @@ def identity(payload):
         [type] -- [description]
     """
     user_id = payload['identity']
-    return User.find_by_id(user_id)
+    return UserModel.find_by_id(user_id)
