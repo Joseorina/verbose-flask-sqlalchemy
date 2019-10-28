@@ -7,11 +7,10 @@ from resources.user import UserRegister
 from resources.item import Item, Items
 
 app = Flask(__name__)
+app.secret_key = 'jose'
 api = Api(app)
 
 jwt = JWT(app, authenticate, identity)
-
-app.secret_key = 'jose'
 
 api.add_resource(Item, '/item/<string:name>')
 api.add_resource(Items,'/items')
