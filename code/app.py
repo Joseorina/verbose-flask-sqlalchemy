@@ -17,4 +17,5 @@ api.add_resource(Items,'/items')
 api.add_resource(UserRegister, '/register')
 
 if __name__ == '__main__':
+    from db import db
     app.run(port=5000, debug=True)
