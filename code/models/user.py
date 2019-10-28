@@ -1,6 +1,13 @@
 import sqlite3
 
-class UserModel:
+class UserModel(db.Model):
+
+    __tablename__ = 'users'
+
+    id = db.Column(db.Integer, primary_key=True)
+    uesrname = db.Column(db.String(80))
+    password = db.Column(db.Strind(80))
+
     def __init__(self, _id, username, password):
         self.id = _id
         self.username = username
