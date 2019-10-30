@@ -1,0 +1,8 @@
+advanced postman usage
+tests - advance d js code that runs after code has been sent to the server,
+when server sends jwt token, the test can acces the jwt token and vreify not empty ..
+
+Register user, auth user, create an item, get an item, get items
+each endpoint has test and if they pass, the api works properly
+
+using sql alchemy
