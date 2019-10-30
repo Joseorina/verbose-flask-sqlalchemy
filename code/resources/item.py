@@ -31,7 +31,7 @@ class Item(Resource):
         data = Item.parser.parse_args()
 
         #item = ItemModel(name, data['price'], data['store_id'])
-        item = ItemModel(name, **data
+        item = ItemModel(name, **data)
 
         try:
             item.save_to_db()
@@ -41,7 +41,7 @@ class Item(Resource):
         return item.json(), 201
 
     def delete(self, name):
-        item = Item.find_by_name(name)
+        item = ItemModel.find_by_name(name)
         if item:
             item.delete_from_db()
 
